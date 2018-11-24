@@ -1,0 +1,18 @@
+<h1>Query Validator</h1>
+<div ng-show="authenticated">
+    <p>The ID is {{greeting.id}}</p>
+    <p>The content is {{greeting.content}}</p>
+</div>
+<div>
+    <textarea rows="6" cols="50" ng-model="sqlValue" ng-model="sqlState" placeholder="Enter Hive Query to validate !!!">
+    </textarea>
+</div>
+<div>
+    <button  style="min-width:350px; min-height: 30px"  type="button" ng-disabled="true">{{sqlState}}</button>
+</div>
+<div >
+    <!--<input type="submit" value="Submit"/>-->
+    <button type="button"  ng-click="submit()">Submit</button>
+    <button type="button"  ng-click="clear()" ng-disabled="isSqlEmpty()">Clear</button>
+
+</div>
